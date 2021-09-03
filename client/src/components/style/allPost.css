@@ -1,3 +1,16 @@
+@font-face {
+    font-family: "Sacco Bold";
+    src: local("Sacco Bold"),
+     url("./fonts/sacco-bold.ttf") format("truetype");
+    font-weight: bold;
+    }
+@font-face {
+    font-family: "Sacco Condensed";
+    src: local("Sacco Condensed"),
+    url("./fonts/sacco-condensed.ttf") format("truetype");
+    font-weight: bold;
+    }
+
 .container{
     margin-top: 25px;
 }
