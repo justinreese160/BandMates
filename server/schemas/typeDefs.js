@@ -8,6 +8,8 @@ const typeDefs = gql`
     posts: [Post]
   }
   type Post{
+  user_id: String
+  author: String
    _id: ID
    instrument: String
    description: String
@@ -36,7 +38,7 @@ const typeDefs = gql`
 
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
-    addPost(instrument: String!, description:String!, genre: String! title: String! ):Post
+    addPost(user_id: String!, author: String!, instrument: String!, description:String!, genre: String! title: String! ):Post
     removePost(postId: ID!): Post
     login(email: String!, password: String!): Auth
   }

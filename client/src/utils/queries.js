@@ -4,6 +4,8 @@ import { gql } from '@apollo/client';
  export const QUERY_POSTS = gql`
   query posts {
     posts {
+      author
+      user_id
      _id  
      instrument
      description
@@ -14,9 +16,11 @@ import { gql } from '@apollo/client';
  `
 
 
-export const FETCH_QUERY_POSTS = gql`
+export const QUERY_MYPOSTS = gql`
   query ($postId: ID!) {
     posts(postId: postId) {
+      author
+      user_id
      _id  
      instrument
      description
@@ -24,3 +28,5 @@ export const FETCH_QUERY_POSTS = gql`
      title
     }
   }`;
+
+ 
