@@ -43,6 +43,7 @@ const [myId, setmyId]= useState("")
           
           <Card.Content>  
                    <Card.Header>Title: {val.title}</Card.Header>
+                   <Card.Header>Author: {val.author}</Card.Header>
           <Card.Description>
            Instrumrnt: {val.instrument}
             </Card.Description>
