@@ -13,7 +13,7 @@ mutation login($email: String!, $password: String!) {
   }
 }
 `;
-// Sing up requires username, email,password, image
+// Sing up requires username, email,password
 export const ADD_USER = gql`
   mutation addUser($username: String!, $email: String!, $password: String!) {
     addUser(username: $username, email: $email, password: $password) {
@@ -43,3 +43,15 @@ export const ADD_POST = gql`
   `;
 
 
+export const REMOVE_POST = gql`
+  mutation removePost($postId: ID!) {
+    removePost(postId: $postId) {
+               _id
+               instrument
+              description
+              genre
+              title
+                        
+    }
+  }
+`;

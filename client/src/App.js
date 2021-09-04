@@ -66,12 +66,7 @@ setLoggedIn(isLoggedIn)
                 <Route exact path='/login' component={Login} />
                 <Route exact path='/signup' component={Signup} />
                 
-
-
            
-         
-        
-            
                 </Switch>
         </Router>
       
