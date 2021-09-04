@@ -13,10 +13,14 @@
 
 .nav-bar-home {
     background-color: #1c2529;
+    color: #fdd05a;
+    font-family:"Sacco Condensed";
    
 }
 .item {
-    font-size: 30px;
+
     color: #fdd05a;
-    font-family:sans-serif;
+    font-family:"Sacco Condensed";
+    padding-bottom: 1px;
+    letter-spacing: .5vw;
 }

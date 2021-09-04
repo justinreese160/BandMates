@@ -59,7 +59,7 @@ setLoggedIn(isLoggedIn)
                 {/* <Redirect exact path={["/", "/login"]} to="/dashboard" />
                 <Redirect exact path={["/", "/signup"]} to="/dashboard" /> */}
                 <Route exact path='/home' component={Home} />
-                <Route exact path='/dashboard' component={ViewAllPosts} />
+                <Route exact path='/viewallposts' component={ViewAllPosts} />
                 <Route exact path='/' component={ViewAllPosts} />
                 <Route exact path='/viewmyposts' component={ViewMyPosts} />
                 <Route exact path='/createpost' component={CreatePost} />
