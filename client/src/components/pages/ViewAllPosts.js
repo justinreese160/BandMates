@@ -18,14 +18,14 @@ function ViewAllPosts() {
 
   const [removePost] = useMutation(REMOVE_POST);
   const handleDeletePost = async (postId) => {
-  
+  console.log(postId)
     try {
       const { data } = await removePost({
         variables: { postId: postId },
 
       });
       console.log('Delete post', data)
-     removePost(postId);
+    window.location.reload();
     } catch (err) {
       console.error(err);
     }
@@ -51,7 +51,7 @@ function ViewAllPosts() {
         </Card.Content>
         <Card.Content extra>
           <div className='ui two buttons'>
-           <Button basic color='green' onClick={() => handleDeletePost(val.postId)}>
+           <Button basic color='green' onClick={() => handleDeletePost(val._id)}>
             Delete
             </Button>
         </div>

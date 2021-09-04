@@ -16,12 +16,15 @@ function CreatePost() {
     event.preventDefault();
     
     try {
-      const { data } = addPost({
+      const { data } = await addPost({
         variables: { ...formState },
       });
       console.log(data);
+      if (data){
+        alert("post saved")
+      
       window.location.reload();
-    
+      }
     } catch (err) {
       console.error(err);
     }
@@ -76,11 +79,13 @@ function CreatePost() {
             
             Save Post
           </Button>
+          
         </Form.Field>
       </Form>
     </div>
   )
 }
+
 export default CreatePost;
 
 
