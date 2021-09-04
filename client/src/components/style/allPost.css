@@ -13,4 +13,12 @@
 
 .container{
     margin-top: 25px;
+    padding: 2px 14px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    width: 13%;
+    float: left;
+    margin-right: -95px;
+    margin-left: 95px;
 }

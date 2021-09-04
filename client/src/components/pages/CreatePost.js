@@ -14,13 +14,14 @@ function CreatePost() {
   const [addPost, { loading }] = useMutation(ADD_POST);
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-   
+    
     try {
       const { data } = addPost({
         variables: { ...formState },
       });
       console.log(data);
       window.location.reload();
+    
     } catch (err) {
       console.error(err);
     }
@@ -31,7 +32,9 @@ function CreatePost() {
       setFormState({ ...formState, [name]: value });
     } else if (name !== 'username') {
       setFormState({ ...formState, [name]: value });
-    }
+     
+    } 
+    
   };
   return (
     <div className="form-container">
@@ -70,6 +73,7 @@ function CreatePost() {
             disabled={!{ ...formState }}
             type='submit'
             variant='success'>
+            
             Save Post
           </Button>
         </Form.Field>
