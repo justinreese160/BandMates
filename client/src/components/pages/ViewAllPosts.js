@@ -2,13 +2,17 @@ import React, { useState, useEffect} from 'react';
 import { useQuery } from '@apollo/client'
 import { useMutation } from '@apollo/client';
 import { QUERY_POSTS } from '../../utils/queries'
-import { Card, Button} from 'semantic-ui-react'
+import { Card, Button,Icon} from 'semantic-ui-react'
 import { REMOVE_POST } from '../../utils/mutations'
 import '../style/allPost.css';
 function ViewAllPosts() {
-
+const [myId, setmyId]= useState("")
   const { data } = useQuery(QUERY_POSTS)
   const [posts, setPosts] = useState([]);
+  useEffect(() => { 
+    let id = localStorage.getItem('user')
+    setmyId(id)
+  },[])
   useEffect(() => {
     if (data) {
       console.log("Checking all posts", data)
@@ -51,9 +55,11 @@ function ViewAllPosts() {
         </Card.Content>
         <Card.Content extra>
           <div className='ui two buttons'>
-           <Button basic color='green' onClick={() => handleDeletePost(val._id)}>
-            Delete
-            </Button>
+            {val.user_id === myId?
+           <Button basic color='red' onClick={() => handleDeletePost(val._id)}>
+          <Icon name="trash" style={{ margin: 3 }} />
+            </Button>:null
+    }
         </div>
             </Card.Content>
             

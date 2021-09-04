@@ -35,8 +35,12 @@ function Login() {
         variables: { ...userFormData },
       });
       console.log('data!! from mutation attempt', data)
-   
-      Auth.login(data.login.token);
+   if (data){
+     localStorage.setItem("user", data.login.user._id)
+     localStorage.setItem("username", data.login.user.username)
+     Auth.login(data.login.token);
+   }
+      
     } catch (err) {
       console.log('WE HAVE ERRR from mutation thing', err)
      console.error(err);

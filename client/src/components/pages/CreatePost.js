@@ -1,20 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useMutation } from '@apollo/client';
 import { Form, Button } from 'semantic-ui-react'
 import { ADD_POST } from '../../utils/mutations'
 import '../style/CreatePost.css';
 function CreatePost() {
   const [formState, setFormState] = useState({
+    user_id: '',
+    author: '',
     instrument: '',
     genre: '',
     title: '',
     description: '',
   });
+  const [user, setUser] = useState({})
   // Set up our mutation with an option to handle errors
   const [addPost, { loading }] = useMutation(ADD_POST);
+  useEffect(()=>{
+    const author = {
+    id:localStorage.getItem("user"), 
+    username: localStorage.getItem("username")
+    }
+   setFormState({...formState, user_id: author.id, author: author.username})
+  },[])
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    
+    console.log(formState)
     try {
       const { data } = await addPost({
         variables: { ...formState },

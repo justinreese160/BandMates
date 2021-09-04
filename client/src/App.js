@@ -63,12 +63,14 @@ setLoggedIn(isLoggedIn)
                 <Route exact path='/' component={ViewAllPosts} />
                 <Route exact path='/viewmyposts' component={ViewMyPosts} />
                 <Route exact path='/createpost' component={CreatePost} />
+                <Route render={() => <Redirect to="/" />}/>
                 </Switch>
                 :
                 <Switch>
                 <Route exact path='/' component={Home} />
                 <Route exact path='/login' component={Login} />
                 <Route exact path='/signup' component={Signup} />
+                <Route render={() => <Redirect to="/" />}/>
                 </Switch>}
         </Router>
       
