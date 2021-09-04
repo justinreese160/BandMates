@@ -3,17 +3,28 @@
   src: local("Sacco Bold"),
    url("./fonts/sacco-bold.ttf") format("truetype");
   font-weight: bold;
+  color: #FFD036;
   }
 @font-face {
   font-family: "Sacco Condensed";
   src: local("Sacco Condensed"),
   url("./fonts/sacco-condensed.ttf") format("truetype");
   font-weight: bold;
+  color: #FFD036;
   }
+
 
 .form-container{
   width: 600px;
     margin:auto;
+    color: #FFD036;
+}
+.instrument {
+  color:#FFD036;
+  font-family: "Sacco Condensed";
+  font-size: 3vw;
+  margin-bottom: 5px;
+
 }
 /* .discription-form{
  

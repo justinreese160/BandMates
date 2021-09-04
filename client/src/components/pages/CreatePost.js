@@ -50,11 +50,12 @@ function CreatePost() {
     
   };
   return (
+    <div style= {{margin:"0",maxHeight:"100%" ,backgroundColor:"#1c2529",maxWidth:"100%" }}>
     <div className="form-container">
       <Form onSubmit={handleFormSubmit} noValidate className={loading ? 'loading' : ''}>
         <Form.Field>
           <h1>Create a Post:</h1>
-           <Form.Input
+           <Form.Input className="instrument" 
             label="Instrument"
             placholder="Instrument.."
             name="instrument"
@@ -83,6 +84,7 @@ function CreatePost() {
             onChange={handleChange}
           />
           <Button className="button-form"
+          
             disabled={!{ ...formState }}
             type='submit'
             variant='success'>
@@ -92,6 +94,7 @@ function CreatePost() {
           
         </Form.Field>
       </Form>
+    </div>
     </div>
   )
 }
