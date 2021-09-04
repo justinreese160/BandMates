@@ -53,21 +53,23 @@ setLoggedIn(isLoggedIn)
         <Router>
         {loggedIn ? (<NavTabsDashboard />) : (<NavTabsHome />)}
           
-          
+          {loggedIn?
                <Switch>
               
                 {/* <Redirect exact path={["/", "/login"]} to="/dashboard" />
                 <Redirect exact path={["/", "/signup"]} to="/dashboard" /> */}
-                <Route exact path='/' component={Home} />
-                <Route exact path='/dashboard' component={Dashboard} />
-                <Route exact path='/viewallposts' component={ViewAllPosts} />
+                <Route exact path='/home' component={Home} />
+                <Route exact path='/dashboard' component={ViewAllPosts} />
+                <Route exact path='/' component={ViewAllPosts} />
                 <Route exact path='/viewmyposts' component={ViewMyPosts} />
                 <Route exact path='/createpost' component={CreatePost} />
+                </Switch>
+                :
+                <Switch>
+                <Route exact path='/' component={Home} />
                 <Route exact path='/login' component={Login} />
                 <Route exact path='/signup' component={Signup} />
-                
-           
-                </Switch>
+                </Switch>}
         </Router>
       
         </ApolloProvider>
