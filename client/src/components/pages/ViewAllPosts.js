@@ -1,8 +1,10 @@
 import React, { useState, useEffect} from 'react';
 import { useQuery } from '@apollo/client'
+import { useMutation } from '@apollo/client';
 import { QUERY_POSTS } from '../../utils/queries'
-import { Card, Button,Image} from 'semantic-ui-react'
-
+import { Card, Button} from 'semantic-ui-react'
+import { REMOVE_POST } from '../../utils/mutations'
+import '../style/allPost.css';
 function ViewAllPosts() {
 
   const { data } = useQuery(QUERY_POSTS)
@@ -12,19 +14,31 @@ function ViewAllPosts() {
       console.log("Checking all posts", data)
       setPosts(data.posts)
     }
-    },[data])
+  }, [data])
 
+  const [removePost] = useMutation(REMOVE_POST);
+  const handleDeletePost = async (postId) => {
+  
+    try {
+      const { data } = await removePost({
+        variables: { postId: postId },
+
+      });
+      console.log('Delete post', data)
+     removePost(postId);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+  
+  
   return (
     <div>{" "} {posts.map((val,i) => {
       return <div key={i} className="container">
         <Card>
-          <Card.Content>  <Image
-            floated='right'
-            size='mini'
-            src='https://s3.amazonaws.com/shecodesio-production/uploads/files/000/016/522/original/download.jpeg?1630679706'
-          />
           
-         <Card.Header>Title: {val.title}</Card.Header>
+          <Card.Content>  
+                   <Card.Header>Title: {val.title}</Card.Header>
           <Card.Description>
            Instrumrnt: {val.instrument}
             </Card.Description>
@@ -37,11 +51,12 @@ function ViewAllPosts() {
         </Card.Content>
         <Card.Content extra>
           <div className='ui two buttons'>
-              <Button basic color='green'>
+           <Button basic color='green' onClick={() => handleDeletePost(val.postId)}>
             Delete
             </Button>
         </div>
-        </Card.Content>
+            </Card.Content>
+            
       </Card>
       </div>
     })}
