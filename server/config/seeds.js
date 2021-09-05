@@ -10,6 +10,7 @@ db.once('open', async () => {
       instrument: "Drummer",
       genre: "Alternative",
       description: "Our drummer suck, need a new one. If your name is Dave Grohl, that works",
+      contact: "Test",
       
     },
     {
@@ -18,7 +19,7 @@ db.once('open', async () => {
       instrument: "Singer",
       genre: "Alternative",
       description: "Looking for a band to leech off of my husbands success",
-      
+      contact: "Test",
     },
     {
       author: "KurtCobain",
@@ -26,7 +27,7 @@ db.once('open', async () => {
       instrument: "Sitar",
       genre: "Traditional Indian",
       description: "The Beatles broke up! Looking to get into Indian music and I need a sitar palyer!",
-     
+      contact: "Test",
     },
     
   ]);

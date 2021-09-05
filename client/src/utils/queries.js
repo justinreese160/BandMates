@@ -11,6 +11,7 @@ import { gql } from '@apollo/client';
      description
      genre
      title
+     contact
     }
   }
  `
@@ -26,6 +27,7 @@ export const QUERY_MYPOSTS = gql`
      description
      genre
      title
+     contact
     }
   }`;
 

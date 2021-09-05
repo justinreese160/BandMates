@@ -24,7 +24,10 @@ const postSchema = new Schema({
     type: String,
     required: true,
   },
-  
+  contact: {
+    type: String,
+    required: true,
+  },
   // comment: [{
   //   type: Schema.Types.ObjectId,
   //   ref: 'Comment',

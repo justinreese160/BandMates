@@ -30,8 +30,8 @@ export const ADD_USER = gql`
 
 
 export const ADD_POST = gql`
- mutation addPost($user_id: String!, $author: String!, $instrument: String!, $description:String!, $genre: String! $title: String! ) {
-  addPost(user_id: $user_id, author: $author,  instrument: $instrument,description:$description, genre:$genre,title:$title)
+ mutation addPost($user_id: String!, $author: String!, $instrument: String!, $description:String!, $genre: String!, $title: String!, $contact: String! ) {
+  addPost(user_id: $user_id, author: $author,  instrument: $instrument,description:$description, genre:$genre,title:$title, contact:$contact)
        {
               user_id
               author
@@ -40,6 +40,7 @@ export const ADD_POST = gql`
               description
               genre
               title
+              contact
            }
       }
   `;
@@ -53,6 +54,7 @@ export const REMOVE_POST = gql`
               description
               genre
               title
+              contact
                         
     }
   }
