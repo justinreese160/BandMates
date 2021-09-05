@@ -2,7 +2,7 @@ import React, { useState, useEffect} from 'react';
 import { useQuery } from '@apollo/client'
 import { useMutation } from '@apollo/client';
 import { QUERY_POSTS } from '../../utils/queries'
-import { Card, Button} from 'semantic-ui-react'
+import { Card, Button,Icon} from 'semantic-ui-react'
 import { REMOVE_POST } from '../../utils/mutations'
 import '../style/allPost.css';
 function ViewAllPosts() {
@@ -38,36 +38,38 @@ function ViewAllPosts() {
   };
   
   
-  return (
+  return (<div style={{ backgroundSize: "cover", margin: "0", height: "200vh", backgroundColor: "#1c2529", width: "100%" }}>
     <div>{" "} {posts.map((val,i) => {
       return <div key={i} className="container">
-        <Card>
+        <Card style={{ margin: "3px", fontFamily: "Menlo", color: "#fdd05a", fontSize: "1vw", padding: "5px", width: "100%", overflow: 'auto', height: 300  }}>
           
-          <Card.Content>  
-                   <Card.Header>Title: {val.title}</Card.Header>
-                   <Card.Header>Author: {val.author}</Card.Header>
-          <Card.Description>
-           Instrumrnt: {val.instrument}
+          <Card.Content>
+            <Card.Description style={{ fontSize: "25px", padding: "10px" }}> <strong>Username:</strong> {val.author}</Card.Description>
+            <Card.Description style={{ fontSize: "25px", padding: "10px" }}><strong>Titlt:</strong> {val.title}</Card.Description>
+            <Card.Description style={{ fontSize: "25px", padding: "10px" }}>
+              <strong>Instrumrnt:</strong> {val.instrument}
             </Card.Description>
-            <Card.Description>
-              Genre: {val.genre}
+            <Card.Description style={{ fontSize: "25px", padding: "10px" }}>
+              <strong>Genre:</strong>{val.genre}
             </Card.Description>
-          <Card.Description>
-             Description: {val.description}
+            <Card.Description style={{ fontSize: "20px", padding: "10px" }}>
+              <strong>Description:</strong> {val.description}
             </Card.Description>
         </Card.Content>
         <Card.Content extra>
           <div className='ui two buttons'>
-           <Button basic color='green' onClick={() => handleDeletePost(val._id)}>
-            Delete
+              <Button as="div" color='red' floated="right" onClick={() => handleDeletePost(val._id)}>
+                <Icon name="trash" style={{ margin: 0 }} />
             </Button>
         </div>
             </Card.Content>
             
-      </Card>
+        </Card>
+     
       </div>
     })}
       </div>
+    </div >
     
       
     
