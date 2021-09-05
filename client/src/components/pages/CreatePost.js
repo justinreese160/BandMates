@@ -11,6 +11,7 @@ function CreatePost() {
     genre: '',
     title: '',
     description: '',
+    contact: '',
   });
   const [user, setUser] = useState({})
   // Set up our mutation with an option to handle errors
@@ -81,6 +82,13 @@ function CreatePost() {
             placholder="Description.."
             name="description"
             value={formState.description}
+            onChange={handleChange}
+          />
+           <Form.Input 
+            label="Contact"
+            placholder="contact.."
+            name="contact"
+            value={formState.contact}
             onChange={handleChange}
           />
           <Button className="button-form"

@@ -23,8 +23,8 @@ const resolvers = {
         return { token, user };
       },
     
-      addPost: async (parent, {user_id, author, instrument, description, genre, title }) => {
-        return await Post.create({user_id, author, instrument, description, genre, title });
+      addPost: async (parent, {user_id, author, instrument, description, genre, title, contact }) => {
+        return await Post.create({user_id, author, instrument, description, genre, title, contact });
       },
      
       removePost: async (parent, { postId }) => {

@@ -63,14 +63,17 @@ const [myId, setmyId]= useState("")
             <Card.Description style={{ fontSize: "25px", padding: "10px"}}> <strong>Username:</strong> {val.author}</Card.Description>
             <Card.Description style={{ fontSize: "25px", padding: "10px" }}><strong>Title:</strong> {val.title}</Card.Description>
             <Card.Description style={{ fontSize: "25px", padding: "10px" }}>
-              <strong>Instrumrnt:</strong>  {val.instrument}
+              <strong>Instrument:</strong>  {val.instrument}
             </Card.Description>
             <Card.Description style={{ fontSize: "25px", padding: "10px"  }}>
               <strong>Genre:</strong> {val.genre}
             </Card.Description>
             <Card.Description style={{ fontSize: "25px", padding: "10px"}}>
               <strong>Description:</strong>  {val.description}
-            </Card.Description>           
+            </Card.Description> 
+            <Card.Description style={{ fontSize: "25px", padding: "10px"}}>
+              <strong>Contact:</strong>  {val.contact}
+            </Card.Description>                     
         </Card.Content>
         <Card.Content extra>
           <div className='ui two buttons'>
