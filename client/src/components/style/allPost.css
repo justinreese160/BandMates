@@ -12,13 +12,32 @@
     }
 
 .container{
-    margin-top: 25px;
+    max-width: 800px;
+    margin-top: 45px;
     padding: 2px 14px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:center;
-    width: 13%;
+    display: block;
+    flex-wrap: wrap;   
     float: left;
     margin-right: -95px;
-    margin-left: 95px;
+    margin-left: 125px;
+    font-size: 23px;
+    
+}
+
+.container:hover{
+    border: 1px solid transparent;
+    transform: scale(1.12);
+    background : #FFD036 !important;
+    
+}
+
+.btn:hover{
+    transition-delay:.1s;
+    background : #1c2529 !important;
+    border:  solid transparent;
+    border-radius: 65px;
+    
+}
+.btn{
+    float:right;
 }
