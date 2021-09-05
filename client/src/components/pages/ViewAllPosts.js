@@ -16,8 +16,7 @@ const style = {
     height: 300,
     backgroundColor: "#1A252B",
     borderRadius: "15px",
-    boxShadow: "2 3px 10px rgb(0 0 0 / 0.2);",
-   
+       
   }
 
 }
@@ -51,7 +50,7 @@ const [myId, setmyId]= useState("")
     }
   };
   
-  return (<div style={{ backgroundSize: "cover", margin: "0", height: "200vh", backgroundImage: "url('https://i.imgur.com/US1bcVM.jpg')", width: "100%" }}>
+  return (<div style={{ backgroundSize: "cover", margin: "0", height: "200vh", backgroundImage: "url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/016/656/original/sam-moqadam-Dm2wQY1_QnM-unsplash.jpg?1630869601')", width: "100%" }}>
     <div>{" "} {posts.map((val,i) => {
       return <div key={i} className="container">
              <Card style={style.card} >

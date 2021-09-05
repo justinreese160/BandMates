@@ -37,7 +37,7 @@ function ViewAllPosts() {
     }
   };
    
-  return (<div style={{ backgroundSize: "cover", margin: "0", height: "200vh", backgroundColor: "#1c2529", width: "100%" }}>
+  return (<div style={{ backgroundSize: "cover", margin: "0", height: "100vh", backgroundImage: "url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/016/658/original/josh-sorenson-MjIMc6uhwrE-unsplash.jpg?1630869784')", width: "100%"  }}>
     <div>{" "} {posts.map((val,i) => {
       return <div key={i} className="container">
         <Card style={{ margin: "3px", fontFamily: "Menlo", color: "#fdd05a", fontSize: "1vw", padding: "5px", width: "100%", overflow: 'auto', height: 300  }}> 
