@@ -50,7 +50,7 @@ const [myId, setmyId]= useState("")
     }
   };
   
-  return (<div style={{ backgroundSize: "cover", margin: "0", height: "200vh", backgroundImage: "url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/016/656/original/sam-moqadam-Dm2wQY1_QnM-unsplash.jpg?1630869601')", width: "100%" }}>
+  return (<div style={{ backgroundSize: "cover", margin: "0", height: "300vh", backgroundImage: "url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/016/656/original/sam-moqadam-Dm2wQY1_QnM-unsplash.jpg?1630869601')", width: "100%" }}>
     <div>{" "} {posts.map((val,i) => {
       return <div key={i} className="container">
              <Card style={style.card} >
