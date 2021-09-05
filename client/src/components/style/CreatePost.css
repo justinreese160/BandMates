@@ -12,12 +12,14 @@
   font-weight: bold;
   color: #FFD036;
   }
-
+.ui.form-container {
+    color: red;
+  }
 
 .form-container{
   width: 600px;
     margin:auto;
-    color: #FFD036;
+    color: #FFD036!important;
 }
 
 

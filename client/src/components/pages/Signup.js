@@ -55,9 +55,10 @@ function Signup() {
     });
   };
   return (
+    <div style= {{fontFamily:"Menlo",backgroundSize:"cover", margin:"0",height:"200vh" ,backgroundImage:"url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/016/662/original/clem-onojeghuo-vOBnbyzA_XA-unsplash.jpg?1630871538')",width:"100%" }}>
     <div className="form-container">
       <Form onSubmit={(e) => {handleFormSubmit(e)}} className={loading ? 'loading' : 'classless'}>
-        <h1>Sign Up</h1>
+        <h1 style = {{fontFamily:"Sacco Condensed", fontSize:"4vw", letterSpacing:".5vw", textShadow:"-2.5px 1px 2px #000"}}>Sign Up</h1>
         <Form.Input
           label="Username"
           placholder="Your username.."
@@ -85,7 +86,7 @@ function Signup() {
           value={userFormData.password}
           onChange={handleInputChange}
         />
-        <Button 
+        <Button style = {{backgroundColor:"#152238",color:"#fdd05a"}}
           disabled={!(userFormData.username && userFormData.email && userFormData.password)}
           type='submit'primary
           variant='success'>
@@ -99,6 +100,7 @@ function Signup() {
           ))}</ul>
         </div>
       )}
+    </div>
     </div>
   )
 }

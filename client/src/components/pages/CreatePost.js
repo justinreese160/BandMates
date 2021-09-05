@@ -3,6 +3,7 @@ import { useMutation } from '@apollo/client';
 import { Form, Button } from 'semantic-ui-react'
 import { ADD_POST } from '../../utils/mutations'
 import '../style/CreatePost.css';
+
 function CreatePost() {
   const [formState, setFormState] = useState({
     user_id: '',
@@ -51,19 +52,20 @@ function CreatePost() {
     
   };
   return (
-    <div style= {{color:"#fdd05a",fontFamily:"Menlo", fontSize:"3vw",backgroundSize:"cover", margin:"0",height:"200vh" ,backgroundColor:"#1c2529",width:"100%" }}>
-    <div className="form-container">
+    <div className="ui formLabel"style= {{fontFamily:"Menlo",backgroundSize:"cover", margin:"0",height:"200vh" ,backgroundImage:"url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/016/660/original/trevor-hayes-HQHeOGmGYvg-unsplash.jpg?1630871006')",width:"100%" }}>
+    <div className="form-container" >
         <Form onSubmit={handleFormSubmit} noValidate className={loading ? 'loading' : ''} style={{ color: "white" }}>
-        <Form.Field>
+        <Form.Field style={{color:"#ffd036"}}>
           <h1>Create a Post:</h1>
-            <Form.Input className="instrument" style={{ color: "white" }}
-            label="Instrument"
+            <Form.Input style={{color:"#ffd036"}}className="instrument" style={{ color: "white" }}
+            label= "Instrument" 
             placholder="Instrument.."
             name="instrument"
             value={formState.instrument}
             onChange={handleChange}
           />
           <Form.Input
+          style={{color:"#ffd036"}}
             label="Genre"
             placholder="Genre.."
             name="genre"
