@@ -7,7 +7,7 @@ import Home from '../src/components/pages/Home';
 import Login from '../src/components/pages/Login';
 import Signup from '../src/components/pages/Signup';
 import NavTabsDashboard from '../src/components/NavTabsDashboard';
-import Dashboard from '../src/components/pages/Dashboard';
+
 import ViewAllPosts from '../src/components/pages/ViewAllPosts';
 import ViewMyPosts from '../src/components/pages/ViewMyPosts'
 import CreatePost from "./components/pages/CreatePost";

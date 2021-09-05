@@ -27,7 +27,7 @@
 .container:hover{
     border: 1px solid transparent;
     transform: scale(1.12);
-    background : #FFD036 !important;
+  
     
 }
 

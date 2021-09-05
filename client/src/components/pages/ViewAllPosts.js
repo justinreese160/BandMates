@@ -57,19 +57,6 @@ const [myId, setmyId]= useState("")
   
   return (<div style={{ backgroundSize: "cover", margin: "0", height: "400vh", backgroundColor: "#1c2529", width: "100%" }}>
     <div>{" "} {posts.map((val,i) => {
-<<<<<<< HEAD
-      return <div key={i} className="container" style={{backgroundColor:"#1C2529", margin:"0", backgroundPosition:"cover"}}>
-        <Card>
-          
-          <Card.Content>  
-                   <Card.Header>Title: {val.title}</Card.Header>
-                   <Card.Header>Author: {val.author}</Card.Header>
-          <Card.Description>
-           Instrumrnt: {val.instrument}
-            </Card.Description>
-            <Card.Description>
-              Genre: {val.genre}
-=======
       return <div key={i} className="container">
              <Card style={style.card} >
           <Card.Content>
@@ -77,7 +64,6 @@ const [myId, setmyId]= useState("")
             <Card.Description style={{ fontSize: "25px", padding: "10px" }}><strong>Title:</strong> {val.title}</Card.Description>
             <Card.Description style={{ fontSize: "25px", padding: "10px" }}>
               <strong>Instrumrnt:</strong>  {val.instrument}
->>>>>>> a821b7b65c22f3f3b74b8ad8305b8616e25b401f
             </Card.Description>
             <Card.Description style={{ fontSize: "25px", padding: "10px"  }}>
               <strong>Genre:</strong> {val.genre}
