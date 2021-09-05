@@ -59,7 +59,7 @@ const [myId, setmyId]= useState("")
             <Card.Description style={{ fontSize: "25px", padding: "10px", textAlign: "center", color: "#E7DDC6", borderBottomStyle: "outset" }}>{val.title}</Card.Description>
             <Card.Description style={{ fontSize: "25px", padding: "10px", color: "#E7DDC6"}}> <strong>Username:</strong> {val.author}</Card.Description>
             <Card.Description style={{ fontSize: "25px", padding: "10px", color: "#E7DDC6" }}>
-              <strong>Instrumrnt:</strong>  {val.instrument}
+              <strong>Instrument:</strong>  {val.instrument}
             </Card.Description>
             <Card.Description style={{ fontSize: "25px", padding: "10px", color: "#E7DDC6"  }}>
               <strong>Genre:</strong> {val.genre}
