@@ -5,7 +5,7 @@ db.once('open', async () => {
   await Post.deleteMany();
   const Posts = await Post.insertMany([
     {
-  
+      author:"CourtneyLove",
       title: "Need a new Drummer",
       instrument: "Drummer",
       genre: "Alternative",
@@ -13,7 +13,7 @@ db.once('open', async () => {
       
     },
     {
-      
+      author: "GeorgeHarrison",
       title: "Looking for a band",
       instrument: "Singer",
       genre: "Alternative",
@@ -21,7 +21,7 @@ db.once('open', async () => {
       
     },
     {
-     
+      author: "KurtCobain",
       title: "Help!",
       instrument: "Sitar",
       genre: "Traditional Indian",

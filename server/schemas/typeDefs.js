@@ -22,8 +22,8 @@ const typeDefs = gql`
    username: String
    comment: String
    
+   
   }
-
 
 
   type Auth {

@@ -11,7 +11,9 @@ const commentSchema = new Schema({
   comment: {
     type: String
   },
-
+  createdAt:{
+    type: String
+  },
 
 });
 

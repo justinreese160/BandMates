@@ -21,13 +21,6 @@ function NavTabsDashboard(props) {
       <div style ={{backgroundColor:"#1c2529"}}>
         <Menu pointing secondary>
         
-          {/* <Menu.Item style ={{color:"#fdd05a", fontSize:"2vw", textShadow:"-1px 1px 2px #000", fontFamily:"sans-serif"}}
-            name='Dashboard'
-            active={activeItem === 'dashboard'}
-            onClick={handleItemClick}
-            as={ Link }
-            to="/dashboard"
-          /> */}
           <Menu.Menu position='right'>
           <Menu.Item style ={{color:"#fdd05a", fontSize:"2vw", textShadow:"-1px 1px 2px #000", fontFamily:"sans-serif"}}
             name='View All Posts'
