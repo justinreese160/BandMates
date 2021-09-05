@@ -8,7 +8,7 @@ function Home() {
     <div style= {{margin:"0",maxHeight:"100%" ,backgroundColor:"#1c2529",width: "100%"}} className ="HomePage">
       <Jumbotron style={{maxWidth:"100%"}}>
         
-    <img style={{ backgroundPosition: "center", backgroundSize: "cover", borderBottomStyle: "outset", margin: "0 0 -5 0" }} className="img" src="https://i.imgur.com/US1bcVM.jpg"></img>
+        <img style={{ backgroundPosition: "center", backgroundSize: "cover", borderBottomStyle: "outset", margin: "0 0 -5 0" }} className="img" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/016/655/original/hkVYvd3_-_Imgur.jpg?1630869400"></img>
           
        
         
