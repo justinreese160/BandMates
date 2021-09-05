@@ -36,13 +36,11 @@ function ViewAllPosts() {
       console.error(err);
     }
   };
-  
-  
+   
   return (<div style={{ backgroundSize: "cover", margin: "0", height: "200vh", backgroundColor: "#1c2529", width: "100%" }}>
     <div>{" "} {posts.map((val,i) => {
       return <div key={i} className="container">
-        <Card style={{ margin: "3px", fontFamily: "Menlo", color: "#fdd05a", fontSize: "1vw", padding: "5px", width: "100%", overflow: 'auto', height: 300  }}>
-          
+        <Card style={{ margin: "3px", fontFamily: "Menlo", color: "#fdd05a", fontSize: "1vw", padding: "5px", width: "100%", overflow: 'auto', height: 300  }}> 
           <Card.Content>
             <Card.Description style={{ fontSize: "25px", padding: "10px" }}> <strong>Username:</strong> {val.author}</Card.Description>
             <Card.Description style={{ fontSize: "25px", padding: "10px" }}><strong>Titlt:</strong> {val.title}</Card.Description>
@@ -62,16 +60,13 @@ function ViewAllPosts() {
                 <Icon name="trash" style={{ margin: 0 }} />
             </Button>
         </div>
-            </Card.Content>
-            
+            </Card.Content>          
         </Card>
      
       </div>
     })}
       </div>
     </div >
-    
-      
     
   )
 }

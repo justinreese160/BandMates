@@ -21,7 +21,7 @@
     margin-right: -95px;
     margin-left: 125px;
     font-size: 23px;
-    
+    color: #ffd036 !important; ;
 }
 
 .container:hover{
@@ -33,7 +33,7 @@
 
 .btn:hover{
     transition-delay:.1s;
-    background : #1c2529 !important;
+    background : #ffd036 !important;
     border:  solid transparent;
     border-radius: 65px;
     
