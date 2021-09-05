@@ -53,6 +53,9 @@ function ViewAllPosts() {
             <Card.Description style={{ fontSize: "20px", padding: "10px" }}>
               <strong>Description:</strong> {val.description}
             </Card.Description>
+            <Card.Description style={{ fontSize: "20px", padding: "10px" }}>
+              <strong>Contact:</strong> {val.contact}
+            </Card.Description>
         </Card.Content>
         <Card.Content extra>
           <div className='ui two buttons'>

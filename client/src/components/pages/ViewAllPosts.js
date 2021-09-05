@@ -66,7 +66,10 @@ const [myId, setmyId]= useState("")
             </Card.Description>
             <Card.Description style={{ fontSize: "25px", padding: "10px", lineHeight: "2vw", color: "#E7DDC6"}}>
               <strong>Description:</strong>  {val.description}
-            </Card.Description>           
+            </Card.Description> 
+            <Card.Description style={{ fontSize: "25px", padding: "10px", color: "#E7DDC6"}}>
+              <strong>Contact:</strong>  {val.contact}
+            </Card.Description>                     
         </Card.Content>
         <Card.Content extra>
           <div className='ui two buttons'>
