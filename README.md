@@ -1,6 +1,7 @@
 ## BandMates
 
-## Description 
+## Description
+A virtual social space for musicians to meet other musicians based on needs,prefernces and a love for music!
 
 ## Github Link
 https://github.com/glenhood/BandMates
@@ -11,6 +12,11 @@ https://band--mates.herokuapp.com
 ## Screenshots
 
 ## Wireframes
+
+
+## Usage
+
+A web application that allows a user to create an account, sign in and create post in a community of other musicians
 
 
 ## License
