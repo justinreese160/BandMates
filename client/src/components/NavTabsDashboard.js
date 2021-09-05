@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { Menu } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 import Authservice from '../utils/auth';
+import './style/fonts/sacco-condensed.ttf';
+import './style/NavTabsDashboard.css';
 
 function NavTabsDashboard(props) {
   console.log('NAV HOME!!!')
@@ -18,32 +20,32 @@ function NavTabsDashboard(props) {
   }
 
     return (
-      <div style ={{backgroundColor:"#1c2529"}}>
+      <div style ={{backgroundColor:"#1c2529", borderBottomStyle:"outset"}}>
         <Menu pointing secondary>
         
           <Menu.Menu position='right'>
-          <Menu.Item style ={{color:"#fdd05a", fontSize:"2vw", textShadow:"-1px 1px 2px #000", fontFamily:"sans-serif"}}
+          <Menu.Item style ={{color:"#fdd05a", fontSize:"2vw", textShadow:"-1px 1px 2px #000",}}
             name='View All Posts'
             active={activeItem === 'viewallposts'}
             onClick={handleItemClick}
             as={ Link }
             to="/viewallposts"
           />
-          <Menu.Item style ={{color:"#fdd05a", fontSize:"2vw", textShadow:"-1px 1px 2px #000", fontFamily:"sans-serif"}}
+          <Menu.Item style ={{color:"#fdd05a", fontSize:"2vw", textShadow:"-1px 1px 2px #000"}}
             name='View My Posts'
             active={activeItem === 'viewmyposts'}
             onClick={handleItemClick}
             as={ Link }
             to="/viewmyposts"
           />
-          <Menu.Item style ={{color:"#fdd05a", fontSize:"2vw", textShadow:"-1px 1px 2px #000", fontFamily:"sans-serif"}}
+          <Menu.Item style ={{color:"#fdd05a", fontSize:"2vw", textShadow:"-1px 1px 2px #000"}}
             name='Create Post'
             active={activeItem === 'createpost'}
             onClick={handleItemClick}
             as={ Link }
             to="/createpost"
             />
-            <Menu.Item className="login" style={{ color: "#fdd05a", fontSize: "2vw", textShadow: "-1px 1px 2px #000", fontFamily: "sans-serif" }}
+            <Menu.Item className="login" style={{ color: "#fdd05a", fontSize: "2vw", textShadow: "-1px 1px 2px #000"}}
               name='logout'
               active={activeItem === 'logout'}
               onClick={Authservice.logout}
