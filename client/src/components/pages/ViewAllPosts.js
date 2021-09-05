@@ -9,18 +9,15 @@ const style = {
   card: {
     margin: "3px",
     fontFamily: "Menlo",
-    color: "#fdd05a",
     fontSize: "1vw",
     padding: "5px",
     width: "100%",
     overflow: 'auto',
     height: 300,
-    backgroundColor: "#E7DDC6",
-    color: "#1A252B",
-    borderRadius: "35px",
-    boxShadow: "2 3px 10px rgb(0 0 0 / 0.2);"
-
-    
+    backgroundColor: "#1A252B",
+    borderRadius: "15px",
+    boxShadow: "2 3px 10px rgb(0 0 0 / 0.2);",
+   
   }
 
 }
@@ -54,24 +51,23 @@ const [myId, setmyId]= useState("")
     }
   };
   
-  
-  return (<div style={{ backgroundSize: "cover", margin: "0", height: "400vh", backgroundColor: "#1c2529", width: "100%" }}>
+  return (<div style={{ backgroundSize: "cover", margin: "0", height: "200vh", backgroundImage: "url('https://i.imgur.com/US1bcVM.jpg')", width: "100%" }}>
     <div>{" "} {posts.map((val,i) => {
       return <div key={i} className="container">
              <Card style={style.card} >
           <Card.Content>
-            <Card.Description style={{ fontSize: "25px", padding: "10px"}}> <strong>Username:</strong> {val.author}</Card.Description>
-            <Card.Description style={{ fontSize: "25px", padding: "10px" }}><strong>Title:</strong> {val.title}</Card.Description>
-            <Card.Description style={{ fontSize: "25px", padding: "10px" }}>
-              <strong>Instrument:</strong>  {val.instrument}
+            <Card.Description style={{ fontSize: "25px", padding: "10px", textAlign: "center", color: "#E7DDC6", borderBottomStyle: "outset" }}>{val.title}</Card.Description>
+            <Card.Description style={{ fontSize: "25px", padding: "10px", color: "#E7DDC6"}}> <strong>Username:</strong> {val.author}</Card.Description>
+            <Card.Description style={{ fontSize: "25px", padding: "10px", color: "#E7DDC6" }}>
+              <strong>Instrumrnt:</strong>  {val.instrument}
             </Card.Description>
-            <Card.Description style={{ fontSize: "25px", padding: "10px"  }}>
+            <Card.Description style={{ fontSize: "25px", padding: "10px", color: "#E7DDC6"  }}>
               <strong>Genre:</strong> {val.genre}
             </Card.Description>
-            <Card.Description style={{ fontSize: "25px", padding: "10px"}}>
+            <Card.Description style={{ fontSize: "25px", padding: "10px", lineHeight: "2vw", color: "#E7DDC6"}}>
               <strong>Description:</strong>  {val.description}
             </Card.Description> 
-            <Card.Description style={{ fontSize: "25px", padding: "10px"}}>
+            <Card.Description style={{ fontSize: "25px", padding: "10px", color: "#E7DDC6"}}>
               <strong>Contact:</strong>  {val.contact}
             </Card.Description>                     
         </Card.Content>

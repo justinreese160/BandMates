@@ -53,10 +53,10 @@ function CreatePost() {
   return (
     <div style= {{color:"#fdd05a",fontFamily:"Menlo", fontSize:"3vw",backgroundSize:"cover", margin:"0",height:"200vh" ,backgroundColor:"#1c2529",width:"100%" }}>
     <div className="form-container">
-      <Form onSubmit={handleFormSubmit} noValidate className={loading ? 'loading' : ''}>
+        <Form onSubmit={handleFormSubmit} noValidate className={loading ? 'loading' : ''} style={{ color: "white" }}>
         <Form.Field>
           <h1>Create a Post:</h1>
-           <Form.Input className="instrument" 
+            <Form.Input className="instrument" style={{ color: "white" }}
             label="Instrument"
             placholder="Instrument.."
             name="instrument"
@@ -70,7 +70,7 @@ function CreatePost() {
             value={formState.genre}
             onChange={handleChange}
           />
-          <Form.Input
+          <Form.Input 
             label="Title"
             placholder="Title.."
             name="title"
@@ -92,7 +92,6 @@ function CreatePost() {
             onChange={handleChange}
           />
           <Button className="button-form"
-          
             disabled={!{ ...formState }}
             type='submit'
             variant='success'>
