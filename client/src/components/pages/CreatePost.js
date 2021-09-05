@@ -50,7 +50,7 @@ function CreatePost() {
     
   };
   return (
-    <div style= {{margin:"0",maxHeight:"100%" ,backgroundColor:"#1c2529",maxWidth:"100%" }}>
+    <div style= {{color:"#fdd05a",fontFamily:"Menlo", fontSize:"3vw",backgroundSize:"cover", margin:"0",height:"200vh" ,backgroundColor:"#1c2529",width:"100%" }}>
     <div className="form-container">
       <Form onSubmit={handleFormSubmit} noValidate className={loading ? 'loading' : ''}>
         <Form.Field>

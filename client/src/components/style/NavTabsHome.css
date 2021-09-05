@@ -15,12 +15,13 @@
     background-color: #1c2529;
     color: #fdd05a;
     font-family:"Sacco Condensed";
+    margin-bottom: -2px;
    
 }
 .item {
 
     color: #fdd05a;
     font-family:"Sacco Condensed";
-    padding-bottom: 1px;
+  
     letter-spacing: .5vw;
 }

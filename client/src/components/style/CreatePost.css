@@ -19,17 +19,14 @@
     margin:auto;
     color: #FFD036;
 }
-.instrument {
-  color:#FFD036;
-  font-family: "Sacco Condensed";
-  font-size: 3vw;
-  margin-bottom: 5px;
 
-}
+
+
 /* .discription-form{
  
 } */
 .button-form{
- background-color:#1A252B !important;
- color:#FFD036 !important;
+ background-color:#FFD036!important;
+ color:#1A252B !important;
+ margin-bottom: 50px;
 }

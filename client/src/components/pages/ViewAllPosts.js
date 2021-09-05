@@ -38,7 +38,7 @@ const [myId, setmyId]= useState("")
   
   return (
     <div>{" "} {posts.map((val,i) => {
-      return <div key={i} className="container">
+      return <div key={i} className="container" style={{backgroundColor:"#1C2529", margin:"0", backgroundPosition:"cover"}}>
         <Card>
           
           <Card.Content>  

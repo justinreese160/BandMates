@@ -15,7 +15,7 @@ function NavTabsHome() {
     return (
       <div className="nav-bar-home" style={{borderBottomStyle:"outset"}}>
         <Menu pointing secondary>
-          <Menu.Item className="home" style ={{color:"#fdd05a", fontSize:"5vw", textShadow:"-1px 1px 2px #000", }}
+          <Menu.Item className="home" style ={{color:"#fdd05a", fontSize:"3vw", textShadow:"-1px 1px 2px #000", }}
             name='home'
             active={activeItem === 'home'}
             onClick={handleItemClick}
@@ -23,14 +23,14 @@ function NavTabsHome() {
             to="/"
           />
           <Menu.Menu position='right'>
-          <Menu.Item className="login" style ={{color:"#fdd05a", fontSize:"5vw", textShadow:"-1px 1px 2px #000",  }}
+          <Menu.Item className="login" style ={{color:"#fdd05a", fontSize:"3vw", textShadow:"-1px 1px 2px #000",  }}
             name='login'
             active={activeItem === 'login'}
             onClick={handleItemClick}
             as={ Link }
             to="/login"
           />
-          <Menu.Item className="signup" style ={{color:"#fdd05a", fontSize:"5vw", textShadow:"-1px 1px 2px #000" }}
+          <Menu.Item className="signup" style ={{color:"#fdd05a", fontSize:"3vw", textShadow:"-1px 1px 2px #000" }}
             name='signup'
             active={activeItem === 'signup'}
             onClick={handleItemClick}
