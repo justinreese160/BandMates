@@ -38,6 +38,13 @@
     border-radius: 65px;
     
 }
+.btn1:hover{
+    transition-delay:.1s;
+    background : red !important;
+    border:  solid transparent;
+    border-radius: 65px;
+    
+}
 .btn{
     float:right;
 }

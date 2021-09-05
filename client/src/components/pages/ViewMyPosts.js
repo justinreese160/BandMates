@@ -5,6 +5,21 @@ import { QUERY_POSTS } from '../../utils/queries'
 import { Card, Button,Icon} from 'semantic-ui-react'
 import { REMOVE_POST } from '../../utils/mutations'
 import '../style/allPost.css';
+
+const style = {
+  card: {
+    margin: "3px",
+    fontFamily: "Menlo",
+    fontSize: "1vw",
+    padding: "5px",
+    width: "100%",
+    overflow: 'auto',
+    height: 300,
+    backgroundColor: "#2d3f4d",
+    borderRadius: "5px",
+  }
+}
+
 function ViewAllPosts() {
 
   const { data } = useQuery(QUERY_POSTS)
@@ -40,26 +55,26 @@ function ViewAllPosts() {
   return (<div style={{ backgroundSize: "cover", margin: "0", height: "100vh", backgroundImage: "url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/016/658/original/josh-sorenson-MjIMc6uhwrE-unsplash.jpg?1630869784')", width: "100%"  }}>
     <div>{" "} {posts.map((val,i) => {
       return <div key={i} className="container">
-        <Card style={{ margin: "3px", fontFamily: "Menlo", color: "#fdd05a", fontSize: "1vw", padding: "5px", width: "100%", overflow: 'auto', height: 300  }}> 
+        <Card style={style.card}>
           <Card.Content>
-            <Card.Description style={{ fontSize: "25px", padding: "10px" }}> <strong>Username:</strong> {val.author}</Card.Description>
-            <Card.Description style={{ fontSize: "25px", padding: "10px" }}><strong>Titlt:</strong> {val.title}</Card.Description>
-            <Card.Description style={{ fontSize: "25px", padding: "10px" }}>
-              <strong>Instrumrnt:</strong> {val.instrument}
+                    <Card.Description style={{ fontSize: "25px", padding: "10px", textAlign: "center", color: "#E7DDC6", borderBottomStyle: "outset"  }}> {val.title}</Card.Description>
+            <Card.Description style={{ fontSize: "25px", padding: "10px", color: "#E7DDC6" }}> <strong>Username: </strong> {val.author}</Card.Description>
+            <Card.Description style={{ fontSize: "25px", padding: "10px", color: "#E7DDC6" }}>
+              <strong>Instrument: </strong> {val.instrument}
             </Card.Description>
-            <Card.Description style={{ fontSize: "25px", padding: "10px" }}>
-              <strong>Genre:</strong>{val.genre}
+            <Card.Description style={{ fontSize: "25px", padding: "10px", color: "#E7DDC6" }}>
+              <strong>Genre: </strong>{val.genre}
             </Card.Description>
-            <Card.Description style={{ fontSize: "20px", padding: "10px" }}>
-              <strong>Description:</strong> {val.description}
+            <Card.Description style={{ fontSize: "20px", padding: "10px", color: "#E7DDC6" }}>
+              <strong>Description: </strong> {val.description}
             </Card.Description>
-            <Card.Description style={{ fontSize: "20px", padding: "10px" }}>
-              <strong>Contact:</strong> {val.contact}
+            <Card.Description style={{ fontSize: "20px", padding: "10px", color: "#E7DDC6" }}>
+              <strong>Contact: </strong> {val.contact}
             </Card.Description>
         </Card.Content>
         <Card.Content extra>
           <div className='ui two buttons'>
-              <Button as="div" color='red' floated="right" onClick={() => handleDeletePost(val._id)}>
+              <Button as="div" color='blue' floated="right" onClick={() => handleDeletePost(val._id)} className="btn1">
                 <Icon name="trash" style={{ margin: 0 }} />
             </Button>
         </div>
