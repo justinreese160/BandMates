@@ -17,6 +17,7 @@ https://band--mates.herokuapp.com
 ## Usage
 
 A web application that allows a user to create an account, sign in and create post in a community of other musicians
+This project was created and deployed using JavaScript, node.js, HTML, CSS, React, MongoDB,and Heroku.
 
 
 ## License
