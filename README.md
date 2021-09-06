@@ -26,11 +26,17 @@ A web application that allows a user to create an account, sign in and create po
 
 <ul>
  <li>Celia Pennington</li>
+ https://github.com/celiajpennington
  <li>Justin Reese</li>
+ https://github.com/justinreese160
  <li>Zhansaya Sarmanova</li>
+ https://github.com/Sarmanova
  <li>Christian Henry</li>
+ https://github.com/ChristianH85
  <li>David Gauthier</li>
+ https://github.com/Cuillerethedj
  <li>Glen Hood</li>
+ https://github.com/glenhood
 </ul>  
 
 ## Questions
