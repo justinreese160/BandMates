@@ -22,7 +22,7 @@ function NavTabsDashboard(props) {
     return (
     <div style={{ backgroundColor: "#1c2529", borderBottomStyle: "outset" }}>
       <Menu pointing secondary>
-          <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/016/653/original/Screen_Shot_2021-09-02_at_11.28.10_AM.png?1630867770" style={{ width: "110px", heigh: "30vh", marginLeft: "35px", marginBottom: ".5vw", marginTop: ".5vw" }}></img>
+          <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/016/653/original/Screen_Shot_2021-09-02_at_11.28.10_AM.png?1630867770" style={{ width: "74px", heigh: "28vh", marginLeft: "35px", marginBottom: ".5vw", marginTop: ".5vw" }}></img>
         <Menu.Menu position='right'>
           <Menu.Item style={{ color: "#fdd05a", fontSize: "2vw", textShadow: "-1px 1px 2px #000", }}
             name='View All Posts'
